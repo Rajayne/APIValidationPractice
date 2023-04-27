@@ -20,6 +20,7 @@
         "pages",
         "publisher",
         "title",
+        "email",
         "year"
       ],
       "properties": {
@@ -93,11 +94,16 @@
           ],
           "pattern": "^(.*)$"
         },
+        "email": {
+          "type": "string",
+          "format": "email"
+        },
         "year": {
           "$id": "#/properties/book/properties/year",
           "type": "integer",
           "title": "The Year Schema",
           "default": 0,
+          "maximum": 2023,
           "examples": [
             2017
           ]
