@@ -20,7 +20,7 @@
         "pages",
         "publisher",
         "title",
-        "email",
+        "contactInfo",
         "year"
       ],
       "properties": {
@@ -94,9 +94,18 @@
           ],
           "pattern": "^(.*)$"
         },
-        "email": {
-          "type": "string",
-          "format": "email"
+        "contactInfo": {
+          "type": "object",
+          "properties": {
+            "phone": {
+              "type": "string",
+              "pattern": "^(\\([0-9]{3}\\))?[0-9]{3}-[0-9]{4}$"
+            },
+            "email": {
+              "type": "string",
+              "format": "email"
+            }
+          }
         },
         "year": {
           "$id": "#/properties/book/properties/year",
